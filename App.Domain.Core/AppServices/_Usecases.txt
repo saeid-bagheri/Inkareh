@@ -1,0 +1,123 @@
+﻿
+(Shared)
+ILoginAppService (Commands)
+ILogoutAppService (Commands)
+
+
+(Customers)
+IRegisterCustomerProfileAppService
+IEditCustomerProfileAppService (Commands) --- Done
+IAddAddressAppService (Commands) --- Done
+IAddOrderAppService (Commands) --- Done
+IGetListOfOrderDetailsAppService (Queries) --- Done with Ostad
+IAcceptBidAppService (Commands) --- Done
+
+
+(Experts)
+IRegisterExpertProfileAppService (Commands)
+IEditExpertProfileAppService (Commands)
+IAddServiceToProfileAppService (Commands)
+IAddBidAppService (Commands)
+IGetListOfBids (Queries)
+
+
+(Orders)
+IOrderDetailsAppService (Queries)
+IGetListOfOrderBidsAppService (Queries)
+IScoreByCustomer (Commands)
+IScoreByAcceptedExpert (Commands)
+
+------------------------------------------------------------------------------
+
+IAddAddressAppService
+IAddCustomerAppService
+IApproveBidAppService
+IDeleteCustomerAppService
+ISetScoreForExpertAppService
+IUpdateCustomerAppService
+IGetCategoriesAppService
+IGetCustomerAppService
+IGetCustomerFinishedOrdersAppService
+IGetCustomerOrdersAppService
+IGetLocalExpertsAppService
+IGetOrderBidsAppService
+
+
+IAddBidAppService
+IAddExpertAppService
+IAddServiceAppService
+IDeletExpertAppService
+ISetScoreForCustomerAppService
+IUpdateExpertAppService
+IGetExpertAppService
+IGetFinishedOrdersAppService
+IGetOrdersAppService
+
+
+IAddOrderAppService
+IDeleteOrderAppService
+IUpdateOrderAppService
+
+
+
+Customer - Command
+AddOrder
+CancelOrder
+SelectWinnerBid
+AddAddress
+EditProfile
+PayOrder
+
+Customer - Query
+GetAllOrders
+GetOrderById
+GetOfferForOrderId
+
+Expert - Command:
+AddBid
+DeleteBid
+UpdateBid
+EditProfile
+EditSkill
+AcceptOrderById
+StartWork
+EndWork
+
+Expert - Query:
+GetOrdersBySkillId
+GetAllExpertBids
+GetAllBidsByServiceId
+
+
+
+Service - Command:
+AddService
+DeleteService
+UpdateService
+
+Service - Query:
+GetAllServicesByCategory
+GetServiceById
+
+Order - Command
+AddFeedbackForExpert
+AddFeedbackForCustomer
+
+Order - Query
+GetAllCustomerOrders
+
+Category - Commands:
+AddCategory
+EditCategory
+DeleteCategory
+
+Category - Queries:
+GetSubCategories
+
+
+
+
+
+
+
+

@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="AppServices\Customers\Commands\" />
+    <Folder Include="AppServices\Customers\Queries\" />
+    <Folder Include="AppServices\Experts\Commands\" />
+    <Folder Include="AppServices\Experts\Queries\" />
+    <Folder Include="AppServices\Orders\Commands\" />
+    <Folder Include="AppServices\Orders\Queries\" />
+    <Folder Include="AppServices\Services\Commands\" />
+  </ItemGroup>
+
 </Project>

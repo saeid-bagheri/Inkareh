@@ -1,0 +1,41 @@
+﻿@using App.Domain.Core.DtoModels.Services;
+@model List<ServiceCategoryOutputModel>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>شماره</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.ParentId</td>
+                <td>@item.Title</td>
+                <td>
+                    @foreach (var service in item.Services)
+                    {
+                        <span>@service.Title </span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
